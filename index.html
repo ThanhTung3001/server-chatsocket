@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+</head>
+<body>
+     ChatApp
+     <input type="text" id="text">
+     <button id="submit">Submit</button>
+     <script src="/socket.io/socket.io.js"></script>
+     <script>
+       const socket = io();
+       document.querySelector("#submit").addEventListener('click',(event)=>{
+     
+        socket.emit('server-chat',{message:document.querySelector("#text").value})
+       })
+       
+     </script>
+</body>
+</html>
