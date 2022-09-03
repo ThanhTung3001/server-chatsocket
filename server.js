@@ -24,6 +24,6 @@ socketIo.on("connection", (socket) => { ///Handle khi có connect từ client t�
   });
 });
 
-server.listen(8080, () => {
+server.listen(80, () => {
     console.log('Server đang chay tren cong 3000');
 });
